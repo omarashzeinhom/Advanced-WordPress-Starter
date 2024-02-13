@@ -1,0 +1,38 @@
+/*
+Theme Name: Zayno Theme
+Theme URI: [Your Theme URI]
+Description: A Luxurious WordPress theme designed for blogs, e-commerce, or portfolios.
+Author: Omar Ashraf Zeinhom
+Author URI: https://www.omarashrafzeinhom.netlify.com
+License: [License Information]
+License URI: [License URL]
+Version: 1.0
+Tags: blog, e-commerce, portfolio
+Text Domain: zayno-theme
+*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+}
+
+h1 {
+    color: #0073e6;
+}
+
+p {
+    line-height: 1.6;
+}

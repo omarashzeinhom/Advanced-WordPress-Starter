@@ -1,0 +1,49 @@
+/*
+Theme Name: Advanced WordPress Development Environment Theme Starter
+Theme URI: [Your Theme URI]
+Description: Advanced WordPress Development Environment Theme Starter
+Author: Omar Ashraf Zeinhom
+Author URI: https://www.omarashrafzeinhom.netlify.com
+License: [License Information]
+License URI: [License URL]
+Version: 1.0
+Tags: blog, e-commerce, portfolio
+Text Domain: wp-advanced-starter
+*/
+
+/* Reset and Normalize Styles */
+/* Add your reset and normalize styles here */
+
+/* General Styles */
+body {
+    font-family: 'Your Preferred Font', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+/* Header Styles */
+/* Add your header styles here */
+
+/* Navigation Styles */
+/* Add your navigation styles here */
+
+/* Content Styles */
+/* Add your content styles here */
+
+/* Sidebar Styles */
+/* Add your sidebar styles here */
+
+/* Footer Styles */
+/* Add your footer styles here */
+
+/* Responsive Styles */
+/* Add your responsive styles here */
+
+/* Custom Styles */
+/* Add any additional custom styles here */
+
+/* ============= */
+/* Custom Classes */
+/* Add your custom class styles here */
