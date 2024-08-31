@@ -10,7 +10,7 @@
     "gulp-uglify": "^3.0.2",
     "livereload": "^0.9.3",
     "sass": "^1.70.0",
-    "webpack": "^5.90.1",
+    "webpack": "^5.94.0",
     "webpack-cli": "^5.1.4",
     "webpack-stream": "^7.0.0"
   },
