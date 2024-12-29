@@ -22,7 +22,6 @@ A luxurious WordPress theme starter built to  increase efficiency and speed in b
 ## Author
 
 - **Author:** Omar Ashraf Zeinhom
-- **Author's Website:** [portfolio](https://omarashrafzeinhom.vercel.app/)
 
 ## Theme Information
 
