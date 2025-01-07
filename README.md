@@ -1,4 +1,5 @@
 # Advanced WordPress Development Environment Theme Starter
+
 - Check TUTORIAL.md for an in depth installation.
 
 ```bash
@@ -10,7 +11,9 @@ yarn install
 ```bash
 gulp 
 ```
-- And in Another Terminal 
+
+- And in Another Terminal
+
 ```bash
 node livereload.js
 ```
@@ -21,13 +24,12 @@ A luxurious WordPress theme starter built to  increase efficiency and speed in b
 
 ## Author
 
-- **Author:** Omar Ashraf Zeinhom
+- **Author:** Omar AbdElRahman
 
 ## Theme Information
 
 - **Theme Name:** Advanced WordPress Development Environment Theme Starter
-- **Theme URI:** [Your Theme URI]
-- **Version:** 1.0
+- **Version:** 1.1
 - **License:** [MIT](https://opensource.org/license/mit/)
 - **License URI:** [License URL](https://opensource.org/license/mit/)
 - **Tags:** blog, e-commerce, portfolio
@@ -42,9 +44,10 @@ A luxurious WordPress theme starter built to  increase efficiency and speed in b
 5. Upload the zip file and activate the theme.
 
 ## Usage
+
 Feel free to customize and extend the theme to suit your specific needs.
 
-## Production 
+## Production
 
 - Inside `functions.php` just update the DEV_ENVIRONMENT constant to false
 - Or you can remove the code entirely & not upload it to production.
@@ -83,3 +86,9 @@ Contributions are welcome! Feel free to fork the repository and submit pull requ
 This project is licensed under the [MIT](https://opensource.org/license/mit/) - see the [LICENSE.md](LICENSE.md) file for details.
 
 ---
+
+### Features
+
+- 1.0 Release
+
+- 1.1 Updated Dev Packages and removed deprecation warning refer to[Breaking Change: Legacy JS API - Sass Docs ](https://sass-lang.com/documentation/breaking-changes/legacy-js-api/) &  [WebPack - breaking-changes/legacy-js-api](https://webpack.js.org/loaders/sass-loader/#api)
