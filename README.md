@@ -50,7 +50,15 @@ Feel free to customize and extend the theme to suit your specific needs.
 ## Production
 
 - Inside `functions.php` just update the DEV_ENVIRONMENT constant to false
-- Or you can remove the code entirely & not upload it to production.
+- Its adviced to remove the `SCSS/JS` entirely & not upload it to production.
+- Change in `webpack.config.js`
+
+```js
+  mode: 'development',
+  // Production mode
+  mode: 'production'
+
+```
 
 ```php
 // Define a constant to indicate whether it's a development environment
