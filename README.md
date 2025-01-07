@@ -99,4 +99,4 @@ This project is licensed under the [MIT](https://opensource.org/license/mit/) - 
 
 - 1.0 Release
 
-- 1.1 Updated Dev Packages and removed deprecation warning refer to[Breaking Change: Legacy JS API - Sass Docs ](https://sass-lang.com/documentation/breaking-changes/legacy-js-api/) &  [WebPack - breaking-changes/legacy-js-api](https://webpack.js.org/loaders/sass-loader/#api)
+- 1.1 Updated Dev Packages and removed deprecation warning refer to[Breaking Change: Legacy JS API - Sass Docs](https://sass-lang.com/documentation/breaking-changes/legacy-js-api/) &  [WebPack - breaking-changes/legacy-js-api](https://webpack.js.org/loaders/sass-loader/#api)
