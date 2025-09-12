@@ -24,7 +24,7 @@ yarn add --global gulp-cli
 - Start By
 
 ```bash
-gulp 
+yarn run gulp 
 ```
 
 - And in Another Terminal
@@ -48,7 +48,7 @@ A luxurious WordPress theme starter built to  increase efficiency and speed in b
 - **License:** [MIT](https://opensource.org/license/mit/)
 - **License URI:** [License URL](https://opensource.org/license/mit/)
 - **Tags:** blog, e-commerce, portfolio
-- **Text Domain:** zayno-theme
+- **Text Domain:** Advanced WordPress Starter
 
 ## Installation
 
