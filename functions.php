@@ -32,3 +32,11 @@ function adv_theme_add_woocommerce_support(){
 }
 add_action('after_setup_theme', 'adv_theme_add_woocommerce_support');
 
+// Remove default block library theme styles 
+
+function adv_theme_remove_block_styles() {
+    wp_dequeue_style( 'wp-block-library' ); // WordPress core
+    wp_dequeue_style( 'wp-block-library-theme' ); // Theme additions
+    wp_dequeue_style( 'global-styles' ); // For FSE themes, often safe to remove
+}
+add_action( 'wp_enqueue_scripts', 'adv_theme_remove_block_styles', 100 );
