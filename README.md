@@ -2,9 +2,24 @@
 
 - Check TUTORIAL.md for an in depth installation.
 
+- 1. Install Packages using `npm`, `yarn`, or `pnpm`
+
 ```bash
 yarn install
 ```
+
+- 2. Install gulp Globally
+
+```bash
+//npm
+npm install --global gulp-cli
+
+//yarn 
+
+yarn add --global gulp-cli
+```
+
+- 3. Restart Terminal
 
 - Start By
 
