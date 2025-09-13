@@ -1,117 +1,128 @@
 # Advanced WordPress Development Environment Theme Starter
 
-- Check TUTORIAL.md for an in depth installation.
+A modern WordPress theme starter with built-in development tools including Gulp, Webpack, and LiveReload for efficient theme development.
 
-- 1. Install Packages using `npm`, `yarn`, or `pnpm`
+## Table of Contents
+
+1. [Quick Start](#quick-start)
+2. [Theme Hierarchy](#theme-hierarchy)
+3. [Development Setup](#development-setup)
+4. [Production Deployment](#production-deployment)
+5. [Theme Customization](#theme-customization)
+6. [Features](#features)
+7. [Support](#support)
+8. [License](#license)
+
+## Quick Start
+
+1. Download and extract the theme to your WordPress themes directory (`wp-content/themes/`)
+2. Install dependencies: `yarn install` (or `npm install`/`pnpm install`)
+3. Install Gulp globally: `yarn global add gulp-cli`
+4. Start development: `yarn run gulp` (in one terminal) and `node livereload.js` (in another terminal)
+5. Activate the theme in WordPress Admin > Appearance > Themes
+
+## Theme Hierarchy
+
+Understanding WordPress template hierarchy is crucial for proper theme development:
+
+### Front-Page vs Home vs Index
+
+- **front-page.php**: Highest priority for your site's front page
+  - Used when a static front page is set in Settings > Reading
+  - Will override home.php for the front page
+- **home.php**: Blog posts index page
+  - Used when "Your latest posts" is selected in Settings > Reading
+  - Also used for the posts page when a static front page is set
+- **index.php**: The fallback template
+  - Used when no more specific template is found
+  - Should contain the basic loop and structure
+
+For detailed information, refer to the [WordPress Template Hierarchy documentation](https://developer.wordpress.org/themes/basics/template-hierarchy/).
+
+## Development Setup
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/en)
+- [XAMPP](https://www.apachefriends.org/) or similar local server
+- WordPress installed locally
+- [LiveReload browser extension](https://chromewebstore.google.com/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
+
+### File Structure
+
+```
+src/
+├── images/      # Source images
+├── js/          # JavaScript files
+│   └── main.js  # Main JS file
+└── scss/        # SCSS styles
+    └── styles.scss  # Main stylesheet
+```
+
+### Development Commands
 
 ```bash
+# Install dependencies
 yarn install
-```
 
-- 2. Install gulp Globally
-
-```bash
-//npm
-npm install --global gulp-cli
-
-//yarn 
-
-yarn add --global gulp-cli
-```
-
-- 3. Restart Terminal
-
-- Start By
-
-```bash
-yarn run gulp 
-```
-
-- And in Another Terminal
-
-```bash
+# Start development (run in separate terminals)
+yarn run gulp
 node livereload.js
 ```
 
-## Description
+## Production Deployment
 
-A luxurious WordPress theme starter built to  increase efficiency and speed in building wordpress themes.
+1. Update `DEV_ENVIRONMENT` constant in `functions.php`:
 
-## Author
+   ```php
+   define('DEV_ENVIRONMENT', false);
+   ```
 
-- **Author:** Omar AbdElRahman
+2. Update Webpack mode in `webpack.config.js`:
 
-## Theme Information
+   ```js
+   mode: 'production'
+   ```
 
-- **Theme Name:** Advanced WordPress Development Environment Theme Starter
-- **Version:** 1.1
-- **License:** [MIT](https://opensource.org/license/mit/)
-- **License URI:** [License URL](https://opensource.org/license/mit/)
-- **Tags:** blog, e-commerce, portfolio
-- **Text Domain:** Advanced WordPress Starter
+3. It's recommended to remove the `src/` directory in production environments
 
-## Installation
+## Theme Customization
 
-1. Download the theme zip file.
-2. Go to your WordPress Dashboard.
-3. Navigate to `Appearance > Themes`.
-4. Click on the "Add New" button.
-5. Upload the zip file and activate the theme.
+### Editing Templates
 
-## Usage
+- **front-page.php**: Customize your site's homepage
+- **home.php**: Modify your blog index page
+- **index.php**: Edit the fallback template
 
-Feel free to customize and extend the theme to suit your specific needs.
+### Adding Styles
 
-## Production
+Edit `src/scss/styles.scss` for all your custom styles. The Gulp workflow will automatically compile and prefix your CSS.
 
-- Inside `functions.php` just update the DEV_ENVIRONMENT constant to false
-- Its adviced to remove the `SCSS/JS` entirely & not upload it to production.
-- Change in `webpack.config.js`
+### Adding JavaScript
 
-```js
-  mode: 'development',
-  // Production mode
-  mode: 'production'
+Place custom JavaScript in `src/js/main.js`. Webpack will process and bundle your scripts.
 
-```
+### Working with Template Parts
+
+Use WordPress's `get_template_part()` function to include reusable components:
 
 ```php
-// Define a constant to indicate whether it's a development environment
-define('DEV_ENVIRONMENT', true);
-// Production 
-// define('DEV_ENVIRONMENT', false);
-
-// Function to include Livereload script in the functions.php
-function liveReload() {
-    if (defined('DEV_ENVIRONMENT') && DEV_ENVIRONMENT) {
-        echo '<script src="http://' . $_SERVER['HTTP_HOST'] . ':35729/livereload.js?snipver=1"></script>';
-    }
-}
-
-// Hook the function to the wp_footer action with priority 100
-add_action('wp_footer', 'liveReload', 100);
+<?php get_template_part('partials/section', 'alpha'); ?>
 ```
 
-## Styles
+## Features
 
-The `style.css` file contains the basic styling for the theme. Customize it further to match your design preferences.
+- LiveReload for instant browser refreshing
+- SCSS compilation with autoprefixing
+- JavaScript bundling with Webpack
+- WooCommerce support
+- Clean, minimal starter markup
+- Optimized for development workflow
 
 ## Support
 
-For any inquiries or issues, please contact [Author's Support Email].
-
-## Contribution
-
-Contributions are welcome! Feel free to fork the repository and submit pull requests.
+For issues or questions, please contact [Author's Support Email].
 
 ## License
 
-This project is licensed under the [MIT](https://opensource.org/license/mit/) - see the [LICENSE.md](LICENSE.md) file for details.
-
----
-
-### Features
-
-- 1.0 Release
-
-- 1.1 Updated Dev Packages and removed deprecation warning refer to[Breaking Change: Legacy JS API - Sass Docs](https://sass-lang.com/documentation/breaking-changes/legacy-js-api/) &  [WebPack - breaking-changes/legacy-js-api](https://webpack.js.org/loaders/sass-loader/#api)
+This project is licensed under the [MIT License](https://opensource.org/license/mit/) - see the LICENSE.md file for details.

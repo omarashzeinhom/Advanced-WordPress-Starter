@@ -1,38 +1,208 @@
-/*
-Theme Name: Zayno Theme
-Theme URI: [Your Theme URI]
-Description: A Luxurious WordPress theme designed for blogs, e-commerce, or portfolios.
-Author: Omar Ashraf Zeinhom
-Author URI: https://www.omarashrafzeinhom.netlify.com
-License: [License Information]
-License URI: [License URL]
-Version: 1.0
-Tags: blog, e-commerce, portfolio
-Text Domain: zayno-theme
-*/
+/* Root Variables */
+:root {
+    --primary-color: #0073e6;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --font-family-base: 'Arial', sans-serif;
+    --font-family-heading: 'Georgia', serif;
+    --container-width: 1200px;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --border-radius: 0.25rem;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: var(--font-family-base);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Header Styles */
+.site-header-menu {
+    background-color: #171713;
+    color: white;
+    padding: var(--spacing-md) 0;
+    margin-bottom: var(--spacing-xl);
+}
+
+.site-header-menu .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: #0073e6;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+.site-header-menu li {
+    position: relative;
+    margin: 0;
 }
 
-main {
-    padding: 2rem;
+.site-header-menu li a {
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    padding: 10px 15px;
+    color: var(--light-color);
+    font-size: 1em;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.site-header-menu li a:hover {
+    color: var(--flamingo-red);
+}
+
+.site-header-menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--flamingo-red);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.main-navigation ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-navigation li {
+    margin-left: var(--spacing-lg);
+}
+
+.main-navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Content Styles */
+h1,
+h2,
+h3 {
+    font-family: var(--font-family-heading);
+    margin-bottom: var(--spacing-md);
 }
 
 h1 {
-    color: #0073e6;
+    color: var(--primary-color);
 }
 
-p {
-    line-height: 1.6;
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: var(--spacing-lg) 0;
+}
+
+ol,
+ul {
+    margin-left: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+code {
+    background-color: #f4f4f4;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+}
+
+main {
+    padding: var(--spacing-xl) 0;
+}
+
+/* Section Alpha Styles */
+.section-alpha {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-left: 4px solid var(--primary-color);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+    border-radius: var(--border-radius);
+}
+
+.section-alpha h2 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.section-alpha p {
+    margin-bottom: var(--spacing-md);
+}
+
+.section-alpha .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: var(--spacing-lg) 0;
+    margin-top: var(--spacing-xl);
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .site-header-menu .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-navigation ul {
+        margin-top: var(--spacing-md);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-navigation li {
+        margin: var(--spacing-xs) 0;
+    }
 }
