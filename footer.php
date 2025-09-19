@@ -1,3 +1,4 @@
+<?php wp_footer(); ?>
 <footer>
     <p>
         <span class="copyright">
@@ -6,3 +7,7 @@
     </p>
 
 </footer>
+
+</body>
+
+</html>
